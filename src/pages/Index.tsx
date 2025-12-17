@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Phone, Mail, MapPin, Clock, Wrench, Shield, Truck, Settings, CheckCircle2, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import LoadingScreen from "@/components/LoadingScreen";
+import ContactForm from "@/components/ContactForm";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const Index = () => {
@@ -248,51 +249,79 @@ const Index = () => {
             <h2 className="font-heading text-4xl md:text-5xl font-bold mt-4 text-foreground">
               Contact Us
             </h2>
+            <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
+              Fill out the form below or contact us directly. We'll get back to you within 24-48 hours.
+            </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <a
-              href="tel:0113962846"
-              className="bg-card p-8 rounded-xl border border-border hover:border-primary transition-all duration-300 hover:-translate-y-2 group text-center"
-            >
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
-                <Phone className="h-8 w-8 text-primary" />
-              </div>
-              <h3 className="font-heading text-lg font-semibold mb-3 text-foreground">Phone</h3>
-              <div className="space-y-1 text-muted-foreground">
-                <p>011 396 2846</p>
-                <p>083 404 8326</p>
-                <p>063 535 5804</p>
-              </div>
-            </a>
+          <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+            {/* Contact Form */}
+            <div className="bg-card p-8 rounded-xl border border-border">
+              <h3 className="font-heading text-2xl font-semibold mb-6 text-foreground">
+                Send Us a Message
+              </h3>
+              <ContactForm />
+            </div>
 
-            <a
-              href="mailto:dini@dnrtransmissions.co.za"
-              className="bg-card p-8 rounded-xl border border-border hover:border-primary transition-all duration-300 hover:-translate-y-2 group text-center"
-            >
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
-                <Mail className="h-8 w-8 text-primary" />
-              </div>
-              <h3 className="font-heading text-lg font-semibold mb-3 text-foreground">Email</h3>
-              <p className="text-muted-foreground break-all">dini@dnrtransmissions.co.za</p>
-            </a>
+            {/* Contact Info */}
+            <div className="space-y-6">
+              <a
+                href="tel:0113962846"
+                className="flex items-start gap-4 bg-card p-6 rounded-xl border border-border hover:border-primary transition-all duration-300 group"
+              >
+                <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
+                  <Phone className="h-7 w-7 text-primary" />
+                </div>
+                <div>
+                  <h3 className="font-heading text-lg font-semibold mb-2 text-foreground">Phone</h3>
+                  <div className="space-y-1 text-muted-foreground">
+                    <p>011 396 2846</p>
+                    <p>083 404 8326</p>
+                    <p>063 535 5804</p>
+                  </div>
+                </div>
+              </a>
 
-            <a
-              href="https://maps.google.com/?q=Unit+7,+21+Sim+Road,+Pomona,+Kempton+Park,+1619"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-card p-8 rounded-xl border border-border hover:border-primary transition-all duration-300 hover:-translate-y-2 group text-center"
-            >
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
-                <MapPin className="h-8 w-8 text-primary" />
+              <a
+                href="mailto:dini@dnrtransmissions.co.za"
+                className="flex items-start gap-4 bg-card p-6 rounded-xl border border-border hover:border-primary transition-all duration-300 group"
+              >
+                <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
+                  <Mail className="h-7 w-7 text-primary" />
+                </div>
+                <div>
+                  <h3 className="font-heading text-lg font-semibold mb-2 text-foreground">Email</h3>
+                  <p className="text-muted-foreground">dini@dnrtransmissions.co.za</p>
+                </div>
+              </a>
+
+              <a
+                href="https://maps.google.com/?q=Unit+7,+21+Sim+Road,+Pomona,+Kempton+Park,+1619"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-start gap-4 bg-card p-6 rounded-xl border border-border hover:border-primary transition-all duration-300 group"
+              >
+                <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
+                  <MapPin className="h-7 w-7 text-primary" />
+                </div>
+                <div>
+                  <h3 className="font-heading text-lg font-semibold mb-2 text-foreground">Location</h3>
+                  <p className="text-muted-foreground">
+                    Unit 7, 21 Sim Road,<br />
+                    Pomona, Kempton Park, 1619
+                  </p>
+                </div>
+              </a>
+
+              <div className="bg-primary/10 p-6 rounded-xl border border-primary/20">
+                <h3 className="font-heading text-lg font-semibold mb-2 text-foreground">Business Hours</h3>
+                <p className="text-muted-foreground">
+                  Monday - Friday: 7:30 AM - 5:00 PM<br />
+                  Saturday: 8:00 AM - 1:00 PM<br />
+                  Sunday: Closed
+                </p>
               </div>
-              <h3 className="font-heading text-lg font-semibold mb-3 text-foreground">Location</h3>
-              <p className="text-muted-foreground">
-                Unit 7, 21 Sim Road,
-                <br />
-                Pomona, Kempton Park, 1619
-              </p>
-            </a>
+            </div>
           </div>
         </div>
       </section>
