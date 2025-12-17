@@ -1,8 +1,11 @@
+import { useState } from "react";
 import { Phone, Mail, MapPin, Clock, Wrench, Shield, Truck, Settings, CheckCircle2, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import LoadingScreen from "@/components/LoadingScreen";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const Index = () => {
+  const [isLoading, setIsLoading] = useState(true);
   const services = [
     "Supply and repair of gear boxes, differentials, steering boxes and prop shafts",
     "Free technical advice, strip and quote on work done",
@@ -46,7 +49,9 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <>
+      {isLoading && <LoadingScreen onLoadingComplete={() => setIsLoading(false)} />}
+      <div className={`min-h-screen bg-background ${isLoading ? 'opacity-0' : 'opacity-100 transition-opacity duration-500'}`}>
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
@@ -333,6 +338,7 @@ const Index = () => {
         </div>
       </footer>
     </div>
+    </>
   );
 };
 
