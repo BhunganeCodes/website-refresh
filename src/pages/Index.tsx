@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Phone, Mail, MapPin, Clock, Wrench, Shield, Truck, Settings, CheckCircle2, ChevronDown } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Wrench, Shield, Truck, Menu, Settings, CheckCircle2, ChevronDown } from "lucide-react";
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger, SheetClose } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import LoadingScreen from "@/components/LoadingScreen";
 import ContactForm from "@/components/ContactForm";
@@ -81,9 +82,49 @@ const Index = () => {
               Get Quote
             </Button>
           </div>
-          <Button variant="ghost" size="icon" className="md:hidden">
-            <Settings className="h-5 w-5" />
-          </Button>
+          <Sheet>
+            <SheetTrigger asChild>
+              <Button variant="ghost" size="icon" className="md:hidden">
+                <Menu className="h-5 w-5" />
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="right" className="w-64">
+              <SheetHeader>
+                <SheetTitle className="text-left">Menu</SheetTitle>
+              </SheetHeader>
+              <nav className="flex flex-col gap-4 mt-6">
+                <SheetClose asChild>
+                  <button 
+                    onClick={() => scrollToSection("about")} 
+                    className="text-left text-muted-foreground hover:text-primary transition-colors font-medium py-2"
+                  >
+                    About
+                  </button>
+                </SheetClose>
+                <SheetClose asChild>
+                  <button 
+                    onClick={() => scrollToSection("services")} 
+                    className="text-left text-muted-foreground hover:text-primary transition-colors font-medium py-2"
+                  >
+                    Services
+                  </button>
+                </SheetClose>
+                <SheetClose asChild>
+                  <button 
+                    onClick={() => scrollToSection("contact")} 
+                    className="text-left text-muted-foreground hover:text-primary transition-colors font-medium py-2"
+                  >
+                    Contact
+                  </button>
+                </SheetClose>
+                <SheetClose asChild>
+                  <Button variant="hero" size="sm" className="mt-4" onClick={() => scrollToSection("contact")}>
+                    Get Quote
+                  </Button>
+                </SheetClose>
+              </nav>
+            </SheetContent>
+          </Sheet>
         </div>
       </nav>
 
