@@ -62,7 +62,7 @@ const Index = () => {
             <img 
               src={dnrLogo} 
               alt="DNR Transmissions Logo" 
-              className="h-12 sm:h-14 md:h-16 w-auto drop-shadow-[0_0_10px_rgba(255,255,255,0.7)]" 
+              className="h-16 sm:h-20 md:h-24 w-auto drop-shadow-[0_0_12px_rgba(255,255,255,0.8)]" 
             />
           </div>
           <div className="hidden md:flex items-center gap-8">
