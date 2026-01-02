@@ -59,7 +59,11 @@ const Index = () => {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <img src={dnrLogo} alt="DNR Transmissions Logo" className="h-12 w-auto" />
+            <img 
+              src={dnrLogo} 
+              alt="DNR Transmissions Logo" 
+              className="h-10 sm:h-12 md:h-14 w-auto drop-shadow-[0_0_10px_rgba(255,255,255,0.7)]" 
+            />
           </div>
           <div className="hidden md:flex items-center gap-8">
             <button onClick={() => scrollToSection("about")} className="text-muted-foreground hover:text-primary transition-colors font-medium">
@@ -365,7 +369,11 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <div className="flex items-center gap-2">
-              <img src={dnrLogo} alt="DNR Transmissions Logo" className="h-10 w-auto" />
+              <img 
+                src={dnrLogo} 
+                alt="DNR Transmissions Logo" 
+                className="h-8 sm:h-10 w-auto drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]" 
+              />
             </div>
             <p className="text-muted-foreground text-sm text-center">
               © {new Date().getFullYear()} DNR Transmissions. All rights reserved.
