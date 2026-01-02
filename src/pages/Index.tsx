@@ -296,7 +296,7 @@ const Index = () => {
               </a>
 
               <a
-                href="https://maps.google.com/?q=Unit+7,+21+Sim+Road,+Pomona,+Kempton+Park,+1619"
+                href="https://maps.google.com/?q=Unit+F,+44+Goud+Street,+Brentwood+Park,+Benoni,+1501"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-start gap-4 bg-card p-6 rounded-xl border border-border hover:border-primary transition-all duration-300 group"
@@ -307,8 +307,8 @@ const Index = () => {
                 <div>
                   <h3 className="font-heading text-lg font-semibold mb-2 text-foreground">Location</h3>
                   <p className="text-muted-foreground">
-                    Unit 7, 21 Sim Road,<br />
-                    Pomona, Kempton Park, 1619
+                    Unit F, 44 Goud Street,<br />
+                    Brentwood Park, Benoni, 1501
                   </p>
                 </div>
               </a>
