@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import LoadingScreen from "@/components/LoadingScreen";
 import ContactForm from "@/components/ContactForm";
 import heroBg from "@/assets/hero-bg.jpg";
+import dnrLogo from "@/assets/DNRLogo.png";
 
 const Index = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -58,15 +59,7 @@ const Index = () => {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
-              <span className="font-heading text-primary-foreground font-bold text-xl">D</span>
-            </div>
-            <div>
-              <span className="font-heading text-xl tracking-wide">
-                <span className="text-primary">DNR</span>
-                <span className="text-foreground"> Transmissions</span>
-              </span>
-            </div>
+            <img src={dnrLogo} alt="DNR Transmissions Logo" className="h-12 w-auto" />
           </div>
           <div className="hidden md:flex items-center gap-8">
             <button onClick={() => scrollToSection("about")} className="text-muted-foreground hover:text-primary transition-colors font-medium">
@@ -372,12 +365,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-                <span className="font-heading text-primary-foreground font-bold">D</span>
-              </div>
-              <span className="font-heading text-lg">
-                <span className="text-primary">DNR</span> Transmissions
-              </span>
+              <img src={dnrLogo} alt="DNR Transmissions Logo" className="h-10 w-auto" />
             </div>
             <p className="text-muted-foreground text-sm text-center">
               © {new Date().getFullYear()} DNR Transmissions. All rights reserved.
