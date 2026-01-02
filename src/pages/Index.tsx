@@ -376,7 +376,7 @@ const Index = () => {
               />
             </div>
             <p className="text-muted-foreground text-sm text-center">
-              © {new Date().getFullYear()} DNR Transmissions. All rights reserved.
+              © {new Date().getFullYear()} DNR Transmissions, Powered by MiTechSolutions. All rights reserved.
             </p>
           </div>
         </div>
